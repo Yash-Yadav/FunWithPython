@@ -20,7 +20,10 @@ while 1:
         for (ex,ey,ew,eh) in eyes:
             cv2.rectangle(roi_color,(ex,ey),(ex+ew,ey+eh),(0,255,0),2)
 
+    img = cv2.flip(img,1)
     cv2.imshow('img',img)
+
+#Press Escape[Esc] to Exit
     k = cv2.waitKey(30) & 0xff
     if k == 27:
         break
